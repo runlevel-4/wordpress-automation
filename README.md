@@ -1,1 +1,1 @@
-# wordpress-automation
+Wordpress Automation Script for Linux
