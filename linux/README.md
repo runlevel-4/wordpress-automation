@@ -27,7 +27,7 @@ The script will run the update and upgrade commands.
 At the Linux command line:
 
 1. If _git_ is not installed, just run `sudo apt install git`
-2. `git clone https://github.com/edwardsj9090/wordpress-automation`
+2. `git clone https://github.com/runlevel-4/wordpress-automation`
 3. `sh wordpress-automation/linux/install_wp.sh`
 
 ======================================================================
