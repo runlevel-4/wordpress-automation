@@ -1,7 +1,7 @@
 @echo off
 echo.
 echo Setting up Windows IIS web server
-dism /norestart /online /enable-feature /featurename:IIS-WebServer
+dism /norestart /online /enable-feature /featurename:IIS-WebServerRole
 timeout /t 3 /nobreak
 echo.
 echo Downloading and installing WordPress
