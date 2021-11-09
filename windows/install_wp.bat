@@ -5,6 +5,6 @@ dism /norestart /online /enable-feature /featurename:IIS-WebServerRole
 timeout /t 3 /nobreak
 echo.
 echo Downloading and installing WordPress
-curl https://wordpress.org/latest.zip -o latest.zip
+curl https://wordpress.org/latest.zip --output latest.zip
 tar -xf latest.zip
 pause
