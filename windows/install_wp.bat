@@ -7,3 +7,4 @@ echo.
 echo Downloading and installing WordPress
 curl https://wordpress.org/latest.zip
 tar -xf latest.zip
+pause
