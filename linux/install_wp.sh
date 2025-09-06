@@ -26,7 +26,7 @@ fi
 sudo apt update && sudo apt upgrade -y && sudo apt dist-upgrade -y
 
 # Install web components
-sudo apt install apache2 mysql-common mariadb-server php8.0 php8.0-mysql tar -y
+sudo apt install apache2 mariadb-common mariadb-server php8.1-common php8.1-mysql tar -y
 
 # Download and install Wordpress
 cd /var/www/html
