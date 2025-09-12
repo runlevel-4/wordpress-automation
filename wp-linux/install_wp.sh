@@ -23,7 +23,7 @@ echo "If you don't have a root password for your MySQL instance, just press Ente
 sudo mysql -u root -p < $HOME/wordpress-automation/linux/wp_mysql_setup.sql
 
 #Setup Wordpress environment
-sudo cp -r $HOME/wordpress-automation/linux/wp-config.php /var/www/html/wordpress/
+sudo cp -r $HOME/wordpress-automation/wp-linux/wp-config.php /var/www/html/wordpress/
 sudo rm -rf /wordpress/wp-config-sample.php
 sudo rm -rf latest.tar.gz
 sudo chown -R www-data: /var/www/html/wordpress
