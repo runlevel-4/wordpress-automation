@@ -1,34 +1,16 @@
 #!/bin/sh
 
-# Check if Debain is installed (this is to determine PHP install method).
-if grep -q Debian "/etc/os-release" ; then
-	echo "Debian is installed"
-	echo
-	echo "Installing Debian prerequisites"
-	echo
-	sudo apt update
-	sudo apt install -y curl wget gnupg2 ca-certificates lsb-release apt-transport-https
- 
-    # Deprecated PHP 7 installer stuff...moving to PHP 8
-	#wget https://packages.sury.org/php/apt.gpg
-	#sudo apt-key add apt.gpg
-    #sudo gpg --import apt.gpg
-    #echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/php8.list
-else
-	echo "Not Debian...continuing"
-	echo
-	echo "Adding Ubuntu-Based PHP repos"
-	echo
-	sudo apt install ca-certificates apt-transport-https software-properties-common -y
-	sudo add-apt-repository ppa:ondrej/php
-	sudo add-apt-repository ppa:ondrej/apache2
-fi
+# Install LAMP stack prerequisites
+echo "Installing prerequisites"
+echo
+sudo apt update
+sudo apt install -y curl wget gnupg2 ca-certificates lsb-release apt-transport-https
 
 # Perform updates
 sudo apt update && sudo apt upgrade -y && sudo apt dist-upgrade -y
 
 # Install web components
-sudo apt install apache2 mariadb-common mariadb-server php8.1-common php8.1-mysql tar -y
+sudo apt install apache2 mariadb-common mariadb-server php8.4-common php8.4-mysql tar -y
 
 # Download and install Wordpress
 cd /var/www/html
