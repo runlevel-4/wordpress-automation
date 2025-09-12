@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# Check if Debain is installed.  If it is, install the php repositories
+# Check if Debain is installed (this is to determine PHP install method).
 if grep -q Debian "/etc/os-release" ; then
 	echo "Debian is installed"
 	echo
@@ -8,7 +8,8 @@ if grep -q Debian "/etc/os-release" ; then
 	echo
 	sudo apt update
 	sudo apt install -y curl wget gnupg2 ca-certificates lsb-release apt-transport-https
-    # Depricated PHP 7 installer stuff...moving to PHP 8
+ 
+    # Deprecated PHP 7 installer stuff...moving to PHP 8
 	#wget https://packages.sury.org/php/apt.gpg
 	#sudo apt-key add apt.gpg
     #sudo gpg --import apt.gpg
