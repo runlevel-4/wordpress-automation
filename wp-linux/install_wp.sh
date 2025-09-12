@@ -1,16 +1,16 @@
 #!/bin/sh
 
+# Perform system updates before doing anything ot ensure the latest OS release
+sudo apt update && sudo apt upgrade -y && sudo apt dist-upgrade -y
+
 # Install LAMP stack prerequisites
 echo "Installing prerequisites"
 echo
 sudo apt update
 sudo apt install -y curl wget gnupg2 ca-certificates lsb-release apt-transport-https
 
-# Perform updates
-sudo apt update && sudo apt upgrade -y && sudo apt dist-upgrade -y
-
 # Install web components
-sudo apt install apache2 mariadb-common mariadb-server php8.4-common php8.4-mysql tar -y
+sudo apt install apache2 mariadb-common mariadb-server php php-mysql tar -y
 
 # Download and install Wordpress
 cd /var/www/html
