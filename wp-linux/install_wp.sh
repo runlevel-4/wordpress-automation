@@ -1,12 +1,11 @@
 #!/bin/sh
 
 # Perform system updates before doing anything ot ensure the latest OS release
-sudo apt update && sudo apt upgrade -y && sudo apt dist-upgrade -y
+sudo apt update && sudo apt full-upgrade -y
 
 # Install LAMP stack prerequisites
 echo "Installing prerequisites"
 echo
-sudo apt update
 sudo apt install -y curl wget gnupg2 ca-certificates lsb-release apt-transport-https
 
 # Install web components
