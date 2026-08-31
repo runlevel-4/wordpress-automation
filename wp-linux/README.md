@@ -12,7 +12,7 @@ At the Linux command line do this from your `/home directory`:
 
 ======================================================================
 
-**NOTE:** I recommend logging into MySQL/MariaDB and changing the root login as well as the password for the _wordpress_ user.  Then update the password value in your _wp-config.php_ file to match.  Do this only if you plan on exposing your server to the internet.
+**NOTE:** I recommend logging into MySQL/MariaDB and changing the root login as well as the password for the _wordpress_ user.  Then update the password value in your _wp-config.php_ file to match.  Do this only if you plan on exposing your server to the internet...otherwise, the default is fine for development.
 
 `sudo mysql -u root -p` (if you don't have a mysql password, just hit _Enter_)
 
